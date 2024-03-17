@@ -1,0 +1,16 @@
+{
+	"name": "pi-netcaster-fe",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node --watch ./src/index.js -- --port=5000 --array=[1,2,3] --streams=[[\\\"http://192.168.1.18:8000/bluetooth.mp3\\\",\\\"Bluetooth_Input\\\"],[\\\"http://192.168.1.18:8000/playlist.mp3\\\",\\\"Local_Playlist\\\"]]"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.18.3"
+	}
+}
