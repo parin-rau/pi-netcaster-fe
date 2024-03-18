@@ -10,19 +10,11 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// app.get("/", (req, res) => {
-// 	const array = getArgv("array");
-// 	console.log(array);
-// 	let msg = "";
-// 	array.forEach((e) => (msg += e));
-// 	res.send(`hi mom. ${msg}`);
-// });
-
 app.use("/", staticRouter);
 app.use("/api", apiRouter);
 app.use("/system", sysRouter);
 
 app.listen(port, () => {
-	process.argv.forEach((a) => console.log(a));
+	//process.argv.forEach((a) => console.log(a));
 	console.log(`App listening on ${getDeviceIp()}:${port}`);
 });

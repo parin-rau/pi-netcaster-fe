@@ -5,6 +5,7 @@ const createAudioComponent = (streams, parentEl, index = 0) => {
 
 	const div = document.createElement("div");
 	div.setAttribute("id", `stream-${index}`);
+	div.classList.add("flex", "flex-col", "gap-4");
 
 	const audio = document.createElement("audio");
 	audio.setAttribute("controls", true);
@@ -12,6 +13,7 @@ const createAudioComponent = (streams, parentEl, index = 0) => {
 
 	const title = document.createElement("h2");
 	title.innerText = parseSpaces(streamTitle);
+	title.classList.add("text-2xl", "font-semibold");
 
 	const source = document.createElement("source");
 	source.setAttribute("src", streamUrl);
